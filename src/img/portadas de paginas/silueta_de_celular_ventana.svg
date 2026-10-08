@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <mask id="screen-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="500">
+      <rect width="500" height="500" fill="#fff" />
+      <rect x="160" y="56" width="180" height="388" rx="14" fill="#000" />
+    </mask>
+  </defs>
+  <image href="silueta_de_celular-.png" width="500" height="500" mask="url(#screen-cutout)" />
+</svg>
