@@ -733,6 +733,23 @@ summary:focus-visible {
     outline-offset: 4px;
 }
 
+.skip-link {
+    position: fixed;
+    z-index: 100;
+    top: 8px;
+    left: 8px;
+    padding: 10px 14px;
+    background: var(--green-dark);
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transform: translateY(calc(-100% - 12px));
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
 .section-shell {
     width: min(1120px, calc(100% - 64px));
     margin-inline: auto;
@@ -899,7 +916,8 @@ summary:focus-visible {
 .hero h1 {
     max-width: 720px;
     color: #ffffff;
-    font-size: clamp(2.85rem, 5.6vw, 5.1rem);
+    font-size: clamp(2.85rem, 4.8vw, 4.5rem);
+    text-wrap: balance;
 }
 
 .hero h1 span {
@@ -942,12 +960,12 @@ summary:focus-visible {
 }
 
 .button-primary {
-    background: var(--green);
-    color: #fff;
+    background: var(--lime);
+    color: var(--ink);
 }
 
 .button-primary:hover {
-    background: var(--green-dark);
+    background: #f7e49b;
 }
 
 .text-link {
@@ -1154,8 +1172,7 @@ summary:focus-visible {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px 64px;
-    padding-right: 50px;
+    gap: 22px 56px;
 }
 
 .project-card {
@@ -1494,14 +1511,17 @@ summary:focus-visible {
     padding-block: 100px;
 }
 
-.profile-copy .eyebrow,
-.contact-copy .eyebrow {
+.profile-copy .eyebrow {
     color: var(--lime);
 }
 
-.profile-copy .eyebrow-mark,
-.contact-copy .eyebrow-mark {
+.profile-copy .eyebrow-mark {
     color: #f0ae91;
+}
+
+.contact-copy .eyebrow,
+.contact-copy .eyebrow-mark {
+    color: var(--green-dark);
 }
 
 .profile-copy h2 {
@@ -1857,8 +1877,7 @@ summary:focus-visible {
 
     .project-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 64px;
-        padding-right: 50px;
+        column-gap: 56px;
     }
 
     .profile-layout,
@@ -1991,7 +2010,7 @@ summary:focus-visible {
 
     .hero h1 span {
         display: block;
-        white-space: nowrap;
+        white-space: normal;
     }
 
     .hero-description {
@@ -2075,7 +2094,7 @@ summary:focus-visible {
     .project-grid {
         grid-template-columns: minmax(0, 1fr);
         gap: 16px;
-        padding-right: 64px;
+        padding-right: 0;
     }
 
     .project-card:last-child {
@@ -2094,7 +2113,7 @@ summary:focus-visible {
     }
 
     .phone-preview {
-        right: -20%;
+        right: 0;
         width: min(34%, 115px);
     }
 
@@ -2221,7 +2240,7 @@ summary:focus-visible {
     }
     to {
         opacity: 1;
-        transform: translateY(-24px);
+        transform: translateY(0);
     }
 }
 
@@ -2256,7 +2275,7 @@ summary:focus-visible {
         }
         to {
             opacity: 1;
-            transform: translateY(-12px);
+            transform: translateY(0);
         }
     }
 }
